@@ -1,6 +1,6 @@
 # Docker Image with InfluxDB and Grafana
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/philhawthorne/docker-influxdb-grafana.svg)](https://dockerhub.com/philhawthorne/docker-influxdb-grafana) [![license](https://img.shields.io/github/license/philhawthorne/docker-influxdb-grafana.svg)](https://dockerhub.com/philhawthorne/docker-influxdb-grafana)
+[![license](https://img.shields.io/github/license/warcry98/influxdb-grafana-docker)]
 
 ![Grafana][grafana-version] ![Influx][influx-version]
 
@@ -12,7 +12,6 @@ The main point of difference with this image is:
 * Grafana will store its data in SQLite files instead of a MySQL table on the container, so MySQL is not installed
 * Telegraf (StatsD) is not included in this container
 
-The main purpose of this image is to be used to show data from a [Home Assistant](https://home-assistant.io) installation. For more information on how to do that, please see my website about how I use this container.
 
 | Description  | Value   |
 |--------------|---------|
@@ -57,10 +56,6 @@ docker exec -it <CONTAINER_ID> bash
 
 Open <http://localhost:3003>
 
-```
-Username: root
-Password: root
-```
 
 ### Add data source on Grafana
 
@@ -80,17 +75,11 @@ Now you are ready to add your first dashboard and launch some queries on a datab
 
 Open <http://localhost:8086>
 
-```
-Port: 8086
-```
 
 ### InfluxDB Shell (CLI)
 
 1. Establish a ssh connection with the container
 2. Launch `influx` to open InfluxDB Shell (CLI)
-
-[buymeacoffee-icon]: https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-2.svg
-[buymeacoffee]: https://www.buymeacoffee.com/philhawthorne
 
 [grafana-version]: https://img.shields.io/badge/Grafana-9.0.6-brightgreen
 [influx-version]: https://img.shields.io/badge/Influx-2.3.0-brightgreen
