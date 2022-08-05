@@ -75,7 +75,7 @@ COPY influxdb/config.toml /etc/influxdb/config.toml
 # Configure Grafana
 COPY grafana/grafana.ini /etc/grafana/grafana.ini
 
-EXPOSE 22 3003 8083 8086
+EXPOSE 22 3003 8086
 
 VOLUME [ "/var/lib/influxdb", "/var/lib/grafana" ]
 

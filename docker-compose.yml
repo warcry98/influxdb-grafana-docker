@@ -12,7 +12,6 @@ services:
         ipv4_address: 172.20.128.2
     ports:
       - 3003:3003
-      - 3004:8083
       - 8086:8086
     volumes:
       - ./influxdb-lib:/var/lib/influxdb:rw
