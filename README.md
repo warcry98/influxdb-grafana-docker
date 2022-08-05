@@ -1,6 +1,6 @@
 # Docker Image with InfluxDB and Grafana
 
-[![license](https://img.shields.io/github/license/warcry98/influxdb-grafana-docker)]
+![license](https://img.shields.io/github/license/warcry98/influxdb-grafana-docker)
 
 ![Grafana][grafana-version] ![Influx][influx-version]
 
