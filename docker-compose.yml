@@ -1,0 +1,24 @@
+version: '3'
+services:
+  grafana-influxdb:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: grafana-influxdb
+    container_name: grafana-influxdb
+    networks:
+      static-network:
+        ipv4_address: 172.20.128.2
+    ports:
+      - 3003:3003
+      - 3004:8083
+      - 8086:8086
+    volumes:
+      - ./influxdb-lib:/var/lib/influxdb:rw
+      - ./grafana-lib:/var/lib/grafana:rw
+networks:
+  static-network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
